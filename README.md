@@ -1,4 +1,15 @@
 # all-installation-commands-for-devops
+#nexus
+cd /opt/
+wget https://download.sonatype.com/nexus/3/nexus-3.94.0-12-linux-x86_64.tar.gz
+tar -zxvf  nexus-3.94.0-12-linux-x86_64.tar.gz
+useradd nexus
+ chown -R nexus:nexus nexus-3.94.0-12 sonatype-work
+ su -nexus
+ cd /opt/
+ cd  nexus-3.94.0-12/bin/
+ ./nexus start =>its shows nexus start
+ ./nexus stop =>its stop the nexus
 #jenkins installation
 sudo wget -O /etc/yum.repos.d/jenkins.repo \
     https://pkg.jenkins.io/rpm-stable/jenkins.repo
