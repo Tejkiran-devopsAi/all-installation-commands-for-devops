@@ -1,4 +1,18 @@
 # all-installation-commands-for-devops
+#jenkins installation
+sudo wget -O /etc/yum.repos.d/jenkins.repo \
+    https://pkg.jenkins.io/rpm-stable/jenkins.repo
+sudo yum upgrade
+# Add required dependencies for the jenkins package
+sudo yum install fontconfig java-21-openjdk
+sudo yum install jenkins
+sudo systemctl daemon-reload
+yum install -y java-21-amazon-corretto
+systemctl start jenkins
+#docker installation
+yum install docker -y
+yum install git -y
+systemctl start docker
 #kubectl installation
  curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
    chmod +x kubectl
