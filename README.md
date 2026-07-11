@@ -52,4 +52,28 @@ sudo yum install terraform
 msiexec.exe /i https://awscli.amazonaws.com/AWSCLIV2.msi
 msiexec.exe /i https://awscli.amazonaws.com/AWSCLIV2.msi /qn
 aws --version
+Method 1: Using Windows Environment Variables
+Press Win + R.
+Type:
+sysdm.cpl
+Press Enter.
+Go to the Advanced tab.
+Click Environment Variables.
+Under System variables, select Path → Edit.
+Click New.
+Add:
+C:\Program Files\Amazon\AWSCLIV2\
+Click OK on all windows.
+Close all PowerShell/VS Code windows and open a new terminal.
 
+Verify:
+
+where.exe aws
+
+Expected:
+
+C:\Program Files\Amazon\AWSCLIV2\aws.exe
+
+Then:
+
+aws --version
