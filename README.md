@@ -45,6 +45,7 @@ aws s3 ls ==> its show the s3 bucket list
 #where u want to store the cluster use below command and create cluster
 export STATE_KOPS_STORE=s3://"ur bucket name"
 kops create cluster --name=tejkiran345.k8s.local --zones=us-east-1a,us-east-1b --control-plane-size=c7i-flex.large --control-plane-count=1 --control-plane-volume-size=24 --node-size=c7i-flex.large --node-count=3 --node-volume-size=25 --image=ami-091138d0f0d41ff90
+kops update cluster --name tejkiran345.k8s.local --yes --admin
 #To install the NGINX Ingress Controller in Kubernetes, use:
 kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/main/deploy/static/provider/cloud/deploy.yaml
 #install terraform
