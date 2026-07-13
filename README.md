@@ -81,3 +81,6 @@ C:\Program Files\Amazon\AWSCLIV2\aws.exe
 Then:
 
 aws --version
+
+#installation of trive to scan the image
+curl -sfL https://raw.githubusercontent.com/aquasecurity/trivy/main/contrib/install.sh | sudo sh -s -- -b /usr/local/bin v0.72.0
